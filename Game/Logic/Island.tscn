@@ -1,19 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2tk66rty0dqx"]
+[gd_scene load_steps=4 format=3 uid="uid://dik4h38uv7uvr"]
 
 [ext_resource type="Script" path="res://Game/Logic/Island.gd" id="1_mx8u3"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bhcv"]
-albedo_color = Color(0.403922, 0.760784, 0.486275, 1)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_8cgya"]
-material = SubResource("StandardMaterial3D_1bhcv")
-size = Vector2(1, 1)
-center_offset = Vector3(0, -0.5, 0)
+[sub_resource type="BoxMesh" id="BoxMesh_qrh86"]
 
 [sub_resource type="MeshLibrary" id="MeshLibrary_qfthp"]
 item/0/name = ""
-item/0/mesh = SubResource("PlaneMesh_8cgya")
-item/0/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/0/mesh = SubResource("BoxMesh_qrh86")
+item/0/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 item/0/shapes = []
 item/0/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/0/navigation_layers = 1
