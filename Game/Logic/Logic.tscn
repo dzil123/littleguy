@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcg6j2nx66nut"]
+
+[ext_resource type="Script" path="res://Game/Logic/Logic.gd" id="1_dk88c"]
+[ext_resource type="PackedScene" uid="uid://dik4h38uv7uvr" path="res://Game/Logic/Island.tscn" id="2_a0nnt"]
+[ext_resource type="Texture2D" uid="uid://5hh8skivfx3s" path="res://icon.svg" id="3_8ntff"]
+[ext_resource type="Script" path="res://Game/Logic/Entity.gd" id="4_lxx3k"]
+
+[node name="Logic" type="Node3D"]
+rotation_order = 0
+script = ExtResource("1_dk88c")
+
+[node name="StartIsland" parent="." instance=ExtResource("2_a0nnt")]
+
+[node name="Player" type="Sprite3D" parent="StartIsland"]
+offset = Vector2(0, 64)
+billboard = 2
+texture = ExtResource("3_8ntff")
+script = ExtResource("4_lxx3k")
+
+[node name="Shadow" type="Sprite3D" parent="StartIsland/Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
+pixel_size = 0.008
+axis = 1
+render_priority = -1
+texture = ExtResource("3_8ntff")
+
+[node name="StartIsland2" parent="." instance=ExtResource("2_a0nnt")]
+transform = Transform3D(1, -1.49012e-08, 0, -1.49012e-08, 1, 2.98023e-08, 2.98023e-08, 0, 1, -9.49346, 0, -8.01309)

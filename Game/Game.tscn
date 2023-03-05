@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://f820huyb0tu4"]
+
+[ext_resource type="PackedScene" uid="uid://bcg6j2nx66nut" path="res://Game/Logic/Logic.tscn" id="1_u27py"]
+[ext_resource type="Script" path="res://Game/GameCamera.gd" id="2_e8q60"]
+
+[node name="Game" type="Node3D"]
+
+[node name="Logic" parent="." instance=ExtResource("1_u27py")]
+transform = Transform3D(0.906308, 0, 0.422618, 0.178606, 0.906308, -0.383022, -0.383022, 0.422618, 0.821394, 0, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.906308, -0.178606, 0.383022, 0, 0.906308, 0.422618, -0.422618, -0.383022, 0.821394, 0, 3, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+projection = 1
+size = 10.0
+script = ExtResource("2_e8q60")
